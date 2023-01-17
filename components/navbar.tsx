@@ -7,12 +7,17 @@ export default function Navbar(){
             {/* Logo */}
             <h1>Logo</h1>
             {/* Menu */}
-            <nav>
-                <Link href='/'>Inicio</Link>
-                <Link href='/about'>Sobre</Link>
+            <nav className={style.menu_container}>
+                <Link href='/' className={style.menu_item}>Inicio</Link>
+                <Link href='' className={style.menu_item}>Blog</Link>
+                <Link href='' className={style.menu_item}>Projetos</Link>
+                <Link href='' className={style.menu_item}>Contato</Link>
             </nav>
             {/* Theme */}
-            <h1>Theme</h1>
+            <section>
+                <h1>Theme</h1>
+                <h1>Lang</h1>
+            </section>
         </section>
     )
 }

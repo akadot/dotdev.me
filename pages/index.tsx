@@ -6,7 +6,11 @@ export default function Home() {
     <>
       
       <main>
-        Main
+        <section>
+          
+          <p>Made with 🌻🎧☕.</p>
+        </section>
+        <section></section>
       </main>
     </>
   )
