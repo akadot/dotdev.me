@@ -9,10 +9,31 @@
 
 body{
   font-family: sans-serif;
+}
+
+#wrapper{
   padding: 3.2rem;
 }
 
 a{
   text-decoration: none;
-  color: $light;
 }
+
+.dark{
+  .background{
+      background-color: $dark;
+  }
+  .text{
+      color: $light;
+  }
+}
+
+.light{
+  .background{
+      background-color: $light;
+  }
+  .text{
+      color: $dark;
+  }
+}
+
