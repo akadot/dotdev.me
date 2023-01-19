@@ -1,23 +1,11 @@
 import type { AppProps } from 'next/app'
-import {useContext} from 'react'
-import { ThemeProvider, ThemeContext } from 'src/context/ThemeContext'
+import { ThemeProvider } from 'src/context/ThemeContext'
 import Head from 'next/head'
 import Menu from '../components/navbar'
 
 import '../styles/globals.scss'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const {theme, setTheme} = useContext(ThemeContext);
-
-  function handleTheme(){
-    console.log(theme)
-    if(theme === 'dark'){
-        setTheme('light')
-    }else if(theme === 'light'){
-        setTheme('dark')
-    }
-  }
-
   return (
     <>
       <Head>
@@ -27,12 +15,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
-        <section className={`${theme} background`} id="wrapper">
-          <Menu handleTheme={handleTheme}/>
+          <Menu />
           <Component {...pageProps} />
-        </section>
       </ThemeProvider>
-
     </>
   )
 }
