@@ -1,14 +1,7 @@
-import { useContext } from 'react'
-import { ThemeContext } from 'src/context/ThemeContext'
 import Link from 'next/link'
 import style from '../styles/Navbar.module.scss'
 
-interface HandleThemeProps{
-    handleTheme: (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void
-}
-
-export default function Navbar(handleTheme:HandleThemeProps){
-
+export default function Navbar(){
     return (
         <section className={`${style.container}`}>
             {/* Logo */}
@@ -16,13 +9,13 @@ export default function Navbar(handleTheme:HandleThemeProps){
             {/* Menu */}
             <nav className={style.menu_container}>
                 <Link href='/' className={style.menu_item}>Inicio</Link>
-                <Link href='' className={style.menu_item}>Blog</Link>
-                <Link href='' className={style.menu_item}>Projetos</Link>
-                <Link href='' className={style.menu_item}>Contato</Link>
+                <Link href='/blog' className={style.menu_item}>Blog</Link>
+                <Link href='/projects' className={style.menu_item}>Projetos</Link>
+                <Link href='/contact' className={style.menu_item}>Contato</Link>
             </nav>
             {/* Theme */}
             <section>
-                <button onClick={() => handleTheme}>Change Theme</button>
+                <button>Change Theme</button>
                 <h1>Lang</h1>
             </section>
         </section>

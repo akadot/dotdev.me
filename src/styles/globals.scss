@@ -1,4 +1,4 @@
-@use './abstracts/colors' as *;
+@use './colors' as *;
 
 *{
   margin: 0;
@@ -9,14 +9,15 @@
 
 body{
   font-family: sans-serif;
-}
-
-#wrapper{
   padding: 3.2rem;
-}
 
-a{
-  text-decoration: none;
+  background-color: $dark;
+  color: $light;
+  
+  a{
+    text-decoration: none;
+    color: $light;
+  }
 }
 
 .dark{
@@ -36,4 +37,3 @@ a{
       color: $dark;
   }
 }
-

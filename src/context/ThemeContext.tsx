@@ -1,8 +1,8 @@
-import React, {createContext, ReactElement, useState} from 'react'
+import React, {createContext, useState} from 'react'
 
 export const ThemeContext = createContext<any>({theme: 'dark', undefined})
 
-export const ThemeProvider: React.FC<{children:JSX.Element}> = ({children}) => {
+export const ThemeProvider: React.FC<{children:JSX.Element[]}> = ({children}) => {
     const [theme, setTheme] = useState('dark');
 
     return (
