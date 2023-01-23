@@ -3,7 +3,7 @@ import { ThemeProvider } from 'src/context/ThemeContext'
 import Head from 'next/head'
 import Menu from '../components/navbar'
 
-import '../styles/globals.scss'
+import GlobalStyles from 'src/styles/globals'
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -15,6 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <ThemeProvider>
+          <GlobalStyles/>
           <Menu />
           <Component {...pageProps} />
       </ThemeProvider>

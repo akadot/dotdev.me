@@ -1,17 +1,16 @@
 import Link from 'next/link'
-import style from '../styles/Navbar.module.scss'
 
 export default function Navbar(){
     return (
-        <section className={`${style.container}`}>
+        <section>
             {/* Logo */}
             <h1>Logo</h1>
             {/* Menu */}
-            <nav className={style.menu_container}>
-                <Link href='/' className={style.menu_item}>Inicio</Link>
-                <Link href='/blog' className={style.menu_item}>Blog</Link>
-                <Link href='/projects' className={style.menu_item}>Projetos</Link>
-                <Link href='/contact' className={style.menu_item}>Contato</Link>
+            <nav>
+                <Link href='/'>inicio</Link>
+                <Link href='/blog'>blog</Link>
+                <Link href='/projects'>projetos</Link>
+                <Link href='/contact'>contato</Link>
             </nav>
             {/* Theme */}
             <section>
