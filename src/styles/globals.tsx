@@ -12,43 +12,14 @@ const GlobalStyles = createGlobalStyle`
     font-family: sans-serif;
     padding: 3.2rem;
 
-    background-color: $dark;
-    color: $light;
+    background-color: #1B1A1A;
+    color: #fff;
     
     a{
       text-decoration: none;
-      color: $light;
-    }
-  }
-
-  .dark{
-    .background{
-        background-color: $dark;
-    }
-    .text{
-        color: $light;
-    }
-  }
-
-  .light{
-    .background{
-        background-color: $light;
-    }
-    .text{
-        color: $dark;
+      color: #fff;
     }
   }
 `;
-
-// $dark: #1B1A1A;
-// $light: #fff;
-
-// //TODO: remove one
-// $yellow: #FEEF2A;
-// $green: #05FF69;
-// $purple: #9C6CFF;
-// $red: #FF5277;
-// $blue: #58D1EB;
-
 
 export default GlobalStyles;

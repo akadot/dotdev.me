@@ -1,4 +1,4 @@
-export default function Contact() {
+const Contact : React.FC = () => {
     return (
       <>
         
@@ -11,4 +11,4 @@ export default function Contact() {
       </>
     )
   }
-  
+export default Contact

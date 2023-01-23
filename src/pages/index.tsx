@@ -1,8 +1,6 @@
-
-export default function Home() {
+const Home : React.FC = () => {
   return (
     <>
-      
       <main>
         <section>
           <p>Made with 🌻🎧☕.</p>
@@ -12,3 +10,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

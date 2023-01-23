@@ -1,4 +1,4 @@
-export default function Blog() {
+const Blog : React.FC = () => {
     return (
       <>
         
@@ -11,4 +11,5 @@ export default function Blog() {
       </>
     )
   }
-  
+
+export default  Blog

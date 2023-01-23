@@ -1,4 +1,4 @@
-export default function Projects() {
+const Projects : React.FC = () => {
     return (
       <>
         
@@ -11,4 +11,4 @@ export default function Projects() {
       </>
     )
   }
-  
+export default Projects

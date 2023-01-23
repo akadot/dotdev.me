@@ -1,5 +1,4 @@
 import type { AppProps } from 'next/app'
-import { ThemeProvider } from 'src/context/ThemeContext'
 import Head from 'next/head'
 import Menu from '../components/navbar'
 
@@ -14,11 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <ThemeProvider>
-          <GlobalStyles/>
-          <Menu />
-          <Component {...pageProps} />
-      </ThemeProvider>
+      <GlobalStyles/>
+      <Menu />
+      <Component {...pageProps} />
     </>
   )
 }
