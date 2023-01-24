@@ -1,15 +1,14 @@
-const Blog : React.FC = () => {
-    return (
-      <>
-        
-        <main>
-          <section>
-            <p>Blog</p>
-          </section>
-          <section></section>
-        </main>
-      </>
-    )
-  }
+const Blog: React.FC = () => {
+  return (
+    <>
+      <main>
+        <section>
+          <p>Blog</p>
+        </section>
+        <section></section>
+      </main>
+    </>
+  );
+};
 
-export default  Blog
+export default Blog;
