@@ -1,9 +1,15 @@
+import styled from "styled-components";
+
+const Text = styled.p`
+  color: ${(props) => props.theme.main};
+`;
+
 const Home: React.FC = () => {
   return (
     <>
       <main>
         <section>
-          <p>Made with 🌻🎧☕.</p>
+          <Text>Made with 🌻🎧☕.</Text>
         </section>
         <section></section>
       </main>

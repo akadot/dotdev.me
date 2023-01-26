@@ -1,36 +1,48 @@
-import { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import colors from "src/styles/themes/colors";
 import { Container, MenuContainer, MenuItem } from "./styles";
 
 interface Props {
-  toggleTheme(): void;
+  toggleTheme(themeSelected: string): void;
 }
 
 const Navbar: React.FC<Props> = ({ toggleTheme }) => {
-  const theme = useContext(ThemeContext);
-
   return (
     <Container>
       {/* Logo */}
       <h1>Logo</h1>
       {/* Menu */}
       <MenuContainer>
-        <MenuItem href="/" bf_color="#FEEF2A">
+        <MenuItem
+          href="/"
+          bf_color={colors.yellow}
+          onClick={() => toggleTheme("home")}
+        >
           início
         </MenuItem>
-        <MenuItem href="/blog" bf_color="#05FF69">
+        <MenuItem
+          href="/blog"
+          bf_color={colors.green}
+          onClick={() => toggleTheme("blog")}
+        >
           blog
         </MenuItem>
-        <MenuItem href="/projects" bf_color="#9C6CFF">
+        <MenuItem
+          href="/projects"
+          bf_color={colors.purple}
+          onClick={() => toggleTheme("projects")}
+        >
           projetos
         </MenuItem>
-        <MenuItem href="/contact" bf_color="#FF5277">
+        <MenuItem
+          href="/contact"
+          bf_color={colors.red}
+          onClick={() => toggleTheme("contact")}
+        >
           contato
         </MenuItem>
       </MenuContainer>
       {/* Theme */}
       <section>
-        <button onClick={toggleTheme}>Change Theme</button>
         <h1>Lang</h1>
       </section>
     </Container>

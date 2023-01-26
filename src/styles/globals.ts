@@ -1,5 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
+import colors from "../styles/themes/colors";
+
 const GlobalStyles = createGlobalStyle`
   *{
     margin: 0;
@@ -12,12 +14,12 @@ const GlobalStyles = createGlobalStyle`
     font-family: sans-serif;
     padding: 3.2rem;
 
-    background-color: ${(props) => props.theme.colors.background};
-    color: ${(props) => props.theme.colors.text};
+    background-color: ${colors.primary};
+    color: ${colors.secondary};
     
     a{
       text-decoration: none;
-      color: ${(props) => props.theme.colors.text};
+      color: ${colors.secondary};
     }
   }
 `;
