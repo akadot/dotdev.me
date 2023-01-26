@@ -1,9 +1,15 @@
+import styled from "styled-components";
+
+const Text = styled.p`
+  color: ${(props) => props.theme.main};
+`;
+
 const Contact: React.FC = () => {
   return (
     <>
       <main>
         <section>
-          <p>Contact</p>
+          <Text>Contact</Text>
         </section>
         <section></section>
       </main>

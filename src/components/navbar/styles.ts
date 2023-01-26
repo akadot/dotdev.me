@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
+import colors from "src/styles/themes/colors";
 
 interface MenuItemProps {
   bf_color: string;
@@ -39,7 +40,7 @@ const MenuItem = styled(Link)<MenuItemProps>`
     width: 65%;
   }
   &:hover {
-    color: ${(props) => props.theme.colors.hover_text};
+    color: ${colors.primary};
   }
 `;
 

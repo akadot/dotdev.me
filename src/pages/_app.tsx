@@ -5,17 +5,17 @@ import { useState } from "react";
 import Head from "next/head";
 import Menu from "../components/Navbar";
 
-import light from "../styles/themes/light";
-import dark from "../styles/themes/dark";
+import themesScheme from "../styles/themes/themes";
 
 import GlobalStyles from "src/styles/globals";
 
 export default function App({ Component, pageProps }: AppProps) {
-  const [theme, setTheme] = useState(dark);
+  const [theme, setTheme] = useState(themesScheme["home"]);
 
-  const toggleTheme = () => {
-    console.log(theme);
-    setTheme(theme.title === "dark" ? light : dark);
+  const toggleTheme = (themeName: string) => {
+    let selected = (themesScheme as any)[themeName];
+
+    setTheme(selected);
   };
 
   return (
