@@ -2,46 +2,43 @@ import colors from "src/styles/themes/colors";
 import { Container, MenuContainer, MenuItem } from "./styles";
 
 interface Props {
-  toggleTheme(themeSelected: string): void;
+  handleTheme(theme_name: string): void;
 }
 
-const Navbar: React.FC<Props> = ({ toggleTheme }) => {
+const Navbar: React.FC<Props> = ({ handleTheme }) => {
   return (
     <Container>
-      {/* Logo */}
       <h1>Logo</h1>
-      {/* Menu */}
       <MenuContainer>
         <MenuItem
           href="/"
           bf_color={colors.yellow}
-          onClick={() => toggleTheme("home")}
+          onClick={() => handleTheme("home")}
         >
           início
         </MenuItem>
         <MenuItem
           href="/blog"
           bf_color={colors.green}
-          onClick={() => toggleTheme("blog")}
+          onClick={() => handleTheme("blog")}
         >
           blog
         </MenuItem>
         <MenuItem
           href="/projects"
           bf_color={colors.purple}
-          onClick={() => toggleTheme("projects")}
+          onClick={() => handleTheme("projects")}
         >
           projetos
         </MenuItem>
         <MenuItem
           href="/contact"
           bf_color={colors.red}
-          onClick={() => toggleTheme("contact")}
+          onClick={() => handleTheme("contact")}
         >
           contato
         </MenuItem>
       </MenuContainer>
-      {/* Theme */}
       <section>
         <h1>Lang</h1>
       </section>

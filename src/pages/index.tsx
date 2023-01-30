@@ -1,18 +1,25 @@
-import styled from "styled-components";
-
-const Text = styled.p`
-  color: ${(props) => props.theme.main};
-`;
+import Typewriter from "typewriter-effect";
+import { HomeContainer, TypewriterContainer, MainText } from "src/styles/Home";
 
 const Home: React.FC = () => {
   return (
     <>
-      <main>
+      <HomeContainer>
         <section>
-          <Text>Made with 🌻🎧☕.</Text>
+          <TypewriterContainer>
+            <MainText>dot</MainText>
+            <Typewriter
+              options={{
+                strings: ["developer", "designer", "writer", "student"],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </TypewriterContainer>
+          <p>Made with 🌻🎧☕.</p>
         </section>
         <section></section>
-      </main>
+      </HomeContainer>
     </>
   );
 };
