@@ -22,6 +22,7 @@ const MenuItem = styled(Link)<MenuItemProps>`
   position: relative;
   z-index: 1;
   transition: all 0.2s ease-in-out;
+  color: ${colors.secondary};
 
   &::before {
     content: "";

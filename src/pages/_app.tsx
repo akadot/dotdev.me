@@ -1,9 +1,10 @@
 import type { AppProps } from "next/app";
+import Head from "next/head";
+
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
 
-import Head from "next/head";
-import Menu from "../components/Navbar";
+import Header from "../components/Navbar";
 
 import themesScheme from "../styles/themes/themes";
 
@@ -12,9 +13,8 @@ import GlobalStyles from "src/styles/globals";
 export default function App({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState(themesScheme["home"]);
 
-  const toggleTheme = (themeName: string) => {
-    let selected = (themesScheme as any)[themeName];
-
+  const handleTheme = (theme_name: string) => {
+    let selected = (themesScheme as any)[theme_name];
     setTheme(selected);
   };
 
@@ -28,7 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Menu toggleTheme={toggleTheme} />
+        <Header handleTheme={handleTheme} />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
