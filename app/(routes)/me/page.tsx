@@ -12,7 +12,7 @@ export default function Page() {
         <Socials />
       </About>
       <section>
-        <p>img</p>
+        <p>studies lists</p>
       </section>
     </Container>
   )

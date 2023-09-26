@@ -31,7 +31,7 @@ const GlobalStyles = createGlobalStyle`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 5rem 15rem;
+    padding: 5rem 20rem;
   
     background-color:#1E1E1E;
     color: #ffffff;
