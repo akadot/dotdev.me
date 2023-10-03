@@ -1,12 +1,10 @@
 'use client'
 import Typewriter from 'typewriter-effect';
-import { Container } from '@/app/styles/pages/index'
 
 export default function Home() {
   return (
-    <Container>
+    <main>
       <p>dot</p>
-
       <Typewriter options={{
         strings: ['developer.', 'designer.', 'writer.', 'student.'],
         autoStart: true,
@@ -18,7 +16,6 @@ export default function Home() {
         cursorClassName: "cursor",
         wrapperClassName: "typewriter",
       }} />
-
-    </Container>
+    </main>
   )
 }

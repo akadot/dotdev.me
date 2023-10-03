@@ -38,7 +38,7 @@ export default async function Page(){
             <section>
                 {posts.map(item => {
                     return (
-                        <section>
+                        <section key={item.url}>
                             <p>{item.title}</p>
                             <p>{item.date}</p>
                             <p>{item.tags}</p>

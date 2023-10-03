@@ -18,14 +18,13 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icon": "^1.0.0",
-    "styled-components": "^6.0.8",
     "three": "^0.156.1",
     "typescript": "5.2.2",
     "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react-icons": "^3.0.0",
-    "@types/styled-components": "^5.1.27",
-    "babel-plugin-styled-components": "^2.1.4"
+    "@types/three": "^0.156.0",
+    "sass": "^1.68.0"
   }
 }
