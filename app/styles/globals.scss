@@ -1,15 +1,6 @@
+@use 'colors';
+
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
-/* :root {
-  $primary-bg: "#1E1E1E";
-  $secondary-bg: "#ffffff";
-
-  $purple:"#9b5de5";
-  $red:"#e63946";
-  $green:"#50fa7b";
-  $yellow:"#ffbe0b";
-} */
-
 
 * {
   box-sizing: border-box;
@@ -31,8 +22,8 @@ body {
   justify-content: space-between;
   padding: 5rem 20rem;
 
-  background-color: #1E1E1E;
-  color: #ffffff;
+  background-color: colors.$main-bg;
+  color: colors.$main-fg;
 
   font-family: 'Lexend';
 }

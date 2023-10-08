@@ -6,10 +6,10 @@ export default function Header() {
         <main className={styles.container}>
             <Link href="/" className={styles.title}>dot</Link>
             <nav className={styles.menu}>
-                <Link href="/me">about</Link>
-                <Link href="/posts">posts</Link>
-                <Link href="/projects">projects</Link>
-                <Link href="/tetris">tetris</Link>
+                <Link className={styles.pages} href="/me">about</Link>
+                <Link className={styles.pages} href="/posts">posts</Link>
+                <Link className={styles.pages} href="/projects">projects</Link>
+                <Link className={styles.pages} href="/tetris">tetris</Link>
             </nav>
             <p>br | en</p>
         </main>

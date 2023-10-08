@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import '@/app/styles/globals.scss'
 
 import Header from '@/app/components/Header'
+import TransitionEffect from './components/Transition'
 
 export const metadata: Metadata = {
   title: 'dot',

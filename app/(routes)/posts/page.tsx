@@ -1,5 +1,8 @@
 "use client"
+import Image from 'next/image'
 import {DevPosts} from '@/app/types/posts'
+
+import utils from '@/app/styles/utils/cards.module.scss'
 
 async function getData() : Promise<DevPosts[]> {
     let allPosts : DevPosts[] = [];
@@ -11,6 +14,7 @@ async function getData() : Promise<DevPosts[]> {
         for(let post of content)
         {
             allPosts.push({
+                id: post.id,
                 title: post.title,
                 date: post.published_timestamp,
                 tags: post.tag_list,
@@ -38,11 +42,11 @@ export default async function Page(){
             <section>
                 {posts.map(item => {
                     return (
-                        <section key={item.url}>
-                            <p>{item.title}</p>
-                            <p>{item.date}</p>
+                        <section key={item.id} className={utils.post_container}>
+                            <h2>{item.title}</h2>
+                            <span>{item.date}</span>
                             <p>{item.tags}</p>
-                            <p>{item.img}</p>
+                            <Image src={item.img} alt="Picture of the author" width={150} height={150} unoptimized/>
                             <p>{item.url}</p>
                             <p>{item.lang}</p>
                         </section>

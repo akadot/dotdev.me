@@ -4,13 +4,18 @@
     justify-content: center;
     width: 100%;
 
-    & p, & .typewriter{
+    & p{
         font-size: 6rem;
-        font-weight: 600;
+        font-weight: 600; 
     }
+}
 
-    & .cursor{
-        font-size: 5rem;
-        font-weight: 500;
-    }
+.cursor{
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.typewriter{
+    font-size: 6rem;
+    font-weight: 600;
 }
