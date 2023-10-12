@@ -1,7 +1,10 @@
 import Image from 'next/image'
+import Link from 'next/link';
+
 import {DevPosts} from '@/app/types/posts'
 
 import utils from '@/app/styles/utils/cards.module.scss'
+import styles from '@/app/styles/pages/posts.module.scss'
 
 async function getData() : Promise<DevPosts[]> {
     let allPosts : DevPosts[] = [];
@@ -23,8 +26,6 @@ async function getData() : Promise<DevPosts[]> {
             })
         }
 
-        
-
     }).catch(() => {
         console.warn("Void Posts.")
     })
@@ -38,17 +39,18 @@ export default async function Page(){
     return (
         <>
             <h1>Posts</h1>
-            <section>
+            <section className={styles.container}>
                 {posts.map(item => {
                     return (
-                        <section key={item.id} className={utils.post_container}>
+                        <Link key={item.id} className={utils.post_container} href={item.url} target='_blank'>
                             <h2>{item.title}</h2>
                             <span>{item.date}</span>
-                            <p>{item.tags}</p>
-                            <Image src={item.img} alt="Picture of the author" width={150} height={150} unoptimized/>
-                            <p>{item.url}</p>
+                            <section className={utils.tag_list}>
+                                {item.tags.map(tag => <p className={utils.tag} key={tag}>{tag}</p>)}
+                            </section>
+                            {/* <Image src={item.img} alt="Picture of the author" width={150} height={150} unoptimized/> */}
                             <p>{item.lang}</p>
-                        </section>
+                        </Link>
                     );
                 })}
             </section>
