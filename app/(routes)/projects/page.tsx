@@ -1,4 +1,3 @@
-"use client"
 import { Repos } from '@/app/types/repos'
 
 async function getData(): Promise<Repos[]> {
