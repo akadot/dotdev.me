@@ -35,9 +35,9 @@ export default async function Page() {
     const posts = await getData();
 
     return (
-        <>
-            <h1>Posts</h1>
-            <section className={styles.container}>
+        <main className={styles.container}>
+            <p>📝 Some cool description.</p>
+            <section className={styles.posts_list}>
                 {posts.map(item => {
                     return (
                         <Link key={item.id} className={styles.post} href={item.url} target='_blank'>
@@ -58,6 +58,6 @@ export default async function Page() {
                     );
                 })}
             </section>
-        </>
+        </main>
     )
 }

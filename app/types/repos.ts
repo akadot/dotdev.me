@@ -3,7 +3,7 @@ export type Repos = {
     name:string,
     description:string,
     language: string,
-    stars:string,
+    stars:number,
     topics: string[],
     url:string,
 }

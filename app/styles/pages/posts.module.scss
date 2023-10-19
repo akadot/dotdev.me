@@ -1,12 +1,18 @@
 @use '../colors';
 
 .container{
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.posts_list{
     display: flex;
     flex-direction: column;
     row-gap: 1.2rem;
-
-    padding-top: 3rem;
-    padding-bottom: 1.5rem;
 }
 
 .post{
@@ -19,6 +25,18 @@
     border-radius: 0.5rem;
     padding: 1rem;
     box-shadow: inset 0 0 0.5px 1px #ffffff13,
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.post:hover{
+    box-shadow: inset 0 0 0.5px 1px #fffb0325,
         /* shadow ring 👇 */
         0 0 0 1px hsla(0, 0%, 0%, 0.05),
         /* multiple soft shadows 👇 */

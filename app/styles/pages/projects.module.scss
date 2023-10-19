@@ -1,0 +1,94 @@
+@use '../colors';
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.5rem;
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+}
+
+.projects_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    column-gap: 1rem;
+    row-gap: 1rem;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    row-gap: 0.1rem;
+    width: 15rem;
+    height: 15rem;
+    word-wrap: break-word;
+    border-radius: 0.2rem;
+    padding: 0.8rem 0.5rem;
+    border: 0.1rem solid #00802625;
+    transition: all 0.2s ease-in-out;
+
+    box-shadow:
+		/* offset-x | offset-y | blur-radius | spread-radius | color */
+		0px 4px 5px 0px hsla(0,0%,0%,0.14), 
+		0px 1px 10px 0px hsla(0,0%,0%,0.12), 
+		0px 2px 4px -1px hsla(0,0%,0%,0.2);
+
+    & h2{
+        font-size: 1.2rem;
+    }
+
+    & p{
+        font-size: 0.9rem;
+    }
+
+}
+
+.project:hover{
+    transform: scale(1.05);
+}
+
+.project:hover > h2{
+    color: colors.$projects;
+}
+
+.metadata {
+    color: colors.$gray-fg;
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    & p {
+        display: flex;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
+}
+
+.topics_list {
+    display: flex;
+    align-items: center;
+    column-gap: 0.2rem;
+    row-gap: 0.2rem;
+    flex-wrap: wrap;
+}
+
+.topic {
+    font-size: 0.8rem;
+    padding: 0.15rem;
+    border-radius: 0.3rem;
+    color: colors.$gray-fg;
+    background-color: #0080261c;
+
+    box-shadow: inset 0 0 0.5px 1px #0080261c,
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+}
