@@ -1,0 +1,33 @@
+@use "../colors";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    row-gap: 3rem;
+
+    & section{
+        display: flex;
+        flex-direction: row;
+    }
+
+    & section p{
+        font-size: 6rem;
+        font-weight: 600; 
+    }
+}
+
+.cursor{
+    color: colors.$home;
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.typewriter{
+    color: colors.$home;
+    font-size: 6rem;
+    font-weight: 600;
+}

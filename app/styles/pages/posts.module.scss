@@ -1,0 +1,92 @@
+@use '../colors';
+
+.container{
+    padding-top: 5rem;
+    padding-bottom: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+}
+
+.posts_list{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.2rem;
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+    row-gap: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: inset 0 0 0.5px 1px #ffffff13,
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.post:hover{
+    box-shadow: inset 0 0 0.5px 1px #50fa7a6c,
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+}
+
+.post:hover>h2 {
+    color: colors.$posts;
+}
+
+.info{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.metadata {
+    color: colors.$gray-fg;
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+
+    & p {
+        display: flex;
+        align-items: center;
+        column-gap: 0.2rem;
+    }
+}
+
+.tag_list {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+}
+
+.tag {
+    font-size: 0.8rem;
+    padding: 0.3rem;
+    // background-color: colors.$posts;
+    border-radius: 0.3rem;
+    color: colors.$gray-fg;
+
+    box-shadow: inset 0 0 0.5px 1px #ffffff13,
+        /* shadow ring 👇 */
+        0 0 0 1px hsla(0, 0%, 0%, 0.05),
+        /* multiple soft shadows 👇 */
+        0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
+        0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
+        0 3.5px 6px hsla(0, 0%, 0%, 0.09);
+}
