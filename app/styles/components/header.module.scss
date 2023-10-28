@@ -65,34 +65,8 @@
     background-color: colors.$tetris;
 }
 
-.switches{
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    column-gap: 0.8rem;
-}
-
-.theme, .langs{
-    cursor: pointer;
-}
-
 .theme{
-    height: fit-content;
-}
-
-.langs{
-    width: 1.2rem;
-    text-align: center;
-    border-bottom: 0.1rem solid transparent;
-}
-
-.langs span{
-    font-size: 1rem;
-}
-
-.langs:hover{
-    color: colors.$home;
-    border-bottom-color: colors.$home;
+    cursor: pointer;
 }
 
 @keyframes hover_link {
