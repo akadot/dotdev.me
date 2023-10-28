@@ -1,3 +1,5 @@
+@use "../colors";
+
 .container{
     display: flex;
     flex-direction: row;
@@ -14,22 +16,22 @@
     }
 
     & a[href*="github"]:hover{
-        color: #6e5494;
+        color: colors.$about;
     }
 
     & a[href*="dev.to"]:hover{
-        color: #e9c155;
+        color: colors.$home;
     }
 
     & a[href*="medium"]:hover{
-        color: #00ab6c;
+        color: colors.$posts;
     }
 
     & a[href*="linkedin"]:hover{
-        color: #0a66c2;
+        color: colors.$projects;
     }
 
     & a[href*="mailto"]:hover{
-        color: #ea4335;
+        color: colors.$tetris;
     }
 }

@@ -5,12 +5,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    & section{
-        display: flex;
-        align-items: center;
-        column-gap: 0.5rem;
-    }
 }
 
 .title {
@@ -18,10 +12,12 @@
     align-items: center;
     font-weight: 500;
     font-size: 1.2rem;
-    transition: transform 0.1s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
         transform: scale(1.1);
+        text-shadow: 0 0 1px colors.$home; 
+
     }
 }
 
@@ -39,7 +35,7 @@
     &::before {
         content: "";
         height: 1.1rem;
-        background-color: aliceblue;
+        background-color: colors.$main-fg;
         position: absolute;
         bottom: 0;
         left: -0.3rem;
@@ -69,6 +65,35 @@
     background-color: colors.$tetris;
 }
 
+.switches{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    column-gap: 0.8rem;
+}
+
+.theme, .langs{
+    cursor: pointer;
+}
+
+.theme{
+    height: fit-content;
+}
+
+.langs{
+    width: 1.2rem;
+    text-align: center;
+    border-bottom: 0.1rem solid transparent;
+}
+
+.langs span{
+    font-size: 1rem;
+}
+
+.langs:hover{
+    color: colors.$home;
+    border-bottom-color: colors.$home;
+}
 
 @keyframes hover_link {
     0% {
@@ -86,14 +111,14 @@
 
 @keyframes hover_color {
     0% {
-        color: #ffffff;
+        color: colors.$main-fg;
     }
 
     10% {
-        color: #1E1E1E;
+        color: colors.$main-bg;
     }
 
     100% {
-        color: #1E1E1E;
+        color: colors.$main-bg;
     }
 }

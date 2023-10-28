@@ -1,3 +1,5 @@
+@use "../colors";
+
 .container{
     display: flex;
     flex-direction: column;
@@ -5,7 +7,7 @@
     justify-content: center;
     width: 100%;
     
-    row-gap: 0.8rem;
+    row-gap: 3rem;
 
     & section{
         display: flex;
@@ -19,11 +21,13 @@
 }
 
 .cursor{
+    color: colors.$home;
     font-size: 5rem;
     font-weight: 500;
 }
 
 .typewriter{
+    color: colors.$home;
     font-size: 6rem;
     font-weight: 600;
 }
