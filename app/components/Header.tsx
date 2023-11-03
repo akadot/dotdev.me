@@ -30,7 +30,10 @@ export default function Header() {
                 <Link className={styles.pages} href="/tetris">tetris</Link>
             </nav>
             <section className={styles.theme}>
-                {theme == "dark" ? <FiMoon size='1.2rem' title='to light' onClick={() => changeThemeTo("light")} /> : <FiSun size='1.2rem' title='to dark' onClick={() => changeThemeTo("dark")} />}
+                {theme == "dark" ?
+                    <FiMoon size='1.3rem' title='to light' onClick={() => changeThemeTo("light")}/>
+                    :
+                    <FiSun size='1.3rem' title='to dark' onClick={() => changeThemeTo("dark")} />}
             </section>
         </header>
     )
