@@ -75,6 +75,14 @@
     }
 }
 
+.theme_moon:hover{
+    stroke: url(#svg_gradient);
+}
+
+.theme_sun:hover{
+    fill: url(#svg_gradient);
+}
+
 @keyframes hover_link {
     0% {
         width: 0;
