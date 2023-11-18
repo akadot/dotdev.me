@@ -19,7 +19,7 @@ export default function RootLayout({
       <body>
           <Header/>
           {children}
-          <span>made with 🌻 ☕ 🎧</span>
+          <span>made with 🌻 ☕ 🎧 💖 by myself ©2023</span>
         </body>
     </html>
   )

@@ -1,0 +1,49 @@
+@use '../colors';
+
+.board{
+    border: 2px solid white;
+    user-select: none;
+    width: fit-content;
+}
+
+.row{
+    display: flex;
+}
+
+.cell{
+    width: 30px;
+    aspect-ratio: 1;
+    border: 1px solid white;
+}
+
+.cell.Empty{
+    background-color: colors.$main-bg;
+}
+
+.cell.I{
+    background-color: colors.$projects;
+}
+
+.cell.J{
+    background-color: colors.$tetris-blue;
+}
+
+.cell.L{
+    background-color: colors.$tetris-orange;
+}
+
+.cell.O{
+    background-color: colors.$home;
+}
+
+.cell.S{
+    background-color: colors.$tetris;
+}
+
+.cell.T{
+    background-color: colors.$about;
+}
+
+.cell.Z{
+    background-color: colors.$posts;
+}
