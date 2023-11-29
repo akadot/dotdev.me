@@ -22,7 +22,7 @@ export default function Header() {
             </nav>
             <section className={styles.theme}>
                 {theme == "dark" ?
-                    <svg onClick={() => changeThemeTo("light")} className={styles.theme_moon} stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.3rem" width="1.3rem" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={() => changeThemeTo("light")} className={styles.theme_moon} stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1.45rem" width="1.45rem" xmlns="http://www.w3.org/2000/svg">
                         <title>to light</title>
                         <defs>
                             <linearGradient id="svg_gradient" gradientTransform="rotate(65)">
@@ -36,7 +36,7 @@ export default function Header() {
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                     :
-                    <svg onClick={() => changeThemeTo("dark")} className={styles.theme_sun} stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 256 256" height="1.3rem" width="1.3rem" xmlns="http://www.w3.org/2000/svg">
+                    <svg onClick={() => changeThemeTo("dark")} className={styles.theme_sun} stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 256 256" height="1.45rem" width="1.45rem" xmlns="http://www.w3.org/2000/svg">
                         <title>to dark</title>
                         <defs>
                             <linearGradient id="svg_gradient" gradientTransform="rotate(65)">
