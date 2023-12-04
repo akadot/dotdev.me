@@ -1,5 +1,5 @@
 "use client"
-import {useEffect, useState} from 'react';
+// import {useEffect, useState} from 'react';
 
 import { motion } from "framer-motion"
 
@@ -9,13 +9,21 @@ const variants = {
 }
 
 export default function Template({ children }: { children: React.ReactNode }) {
-  const [mousePos, setMousePos] = useState({x:0,y:0})
+  // const [mousePos, setMousePos] = useState({x:0,y:0})
   
   // useEffect(() => {
-  //   const mouseMove = e => {
-  //     setMousePos({});
+  //   const mouseMove = ( event: MouseEvent )  => {
+  //     setMousePos({x:event.clientX, y:event.clientY});
   //   }
-  // }, )
+
+  //   window.addEventListener("mousemove", mouseMove);
+
+  //   return () => window.removeEventListener("mousemove", mouseMove);
+  // }, []);
+
+  // const variants = {
+  //   default:{x:mousePos.x, y:mousePos.y}
+  // };
   
   return (
     <motion.main
@@ -25,7 +33,11 @@ export default function Template({ children }: { children: React.ReactNode }) {
       transition={{ type: "linear" }}
     >
       {children}
-      <section className="customCursor"></section>
+      {/* <motion.section 
+        className="customCursor"
+        variants={variants}
+        animate="default"
+      /> */}
     </motion.main>
   )
 }
