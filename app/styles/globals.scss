@@ -40,14 +40,58 @@ a {
 }
 
 .customCursor{
-  width: 1rem;
-  height: 1rem;
-  border: 0.1rem solid colors.$main-fg;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.15rem dotted colors.$main-fg;
   border-radius: 100%;
   background-color:transparent;
 
   position: fixed;
-  top: 0;
-  left: 0;
+  top: -15px;
+  left: -12px;
   pointer-events: none;
+
+  &::after{
+    content: "";
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: colors.$home;
+    display: block;
+    border-radius: 100%;
+    margin:auto;
+    margin-top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.not_found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.8rem;
+
+  & h2{
+    font-size: 2.5rem;
+  }
+
+  & a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.3rem;
+    font-size: 1.1rem;
+    background: colors.$gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  & svg{
+    fill: colors.$about;
+  }
+
+  & a:hover{
+    transform: scale(1.3);
+  }
 }

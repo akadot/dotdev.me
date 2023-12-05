@@ -24,6 +24,16 @@ export default function Cursor() {
             className="customCursor"
             variants={cursorVariants}
             animate="default"
+            transition={{
+              bounce: 0,
+              delay:0,
+              bounceDamping:0,
+              bounceStiffness:0,
+              damping:0,
+              restSpeed:0,
+              type:false
+
+            }}
           />
     )
 }
