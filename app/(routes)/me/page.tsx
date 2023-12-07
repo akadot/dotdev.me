@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import Socials from '@/app/components/Socials'
 
 import styles from '@/app/styles/pages/me.module.scss'
@@ -12,7 +14,11 @@ export default function Page() {
         <Socials />
       </section>
       <section>
-        <p>studies lists</p>
+        <section className={styles.photo_container}>
+          <section className={styles.photo}>
+            <Image src="/me3.jpeg" alt="me" width={280} height={335} quality={100} objectFit='cover' objectPosition='cover' />
+          </section>
+        </section>
       </section>
     </main>
   )

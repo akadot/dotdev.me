@@ -4,6 +4,9 @@ import { motion } from "framer-motion"
 
 export default function Cursor() {
     const [mousePos, setMousePos] = useState({x:0,y:0})
+    
+    const [cursorVariant, setCursorVariant] = useState("default");
+
   
     useEffect(() => {
       const mouseMove = ( event: MouseEvent )  => {
@@ -15,24 +18,24 @@ export default function Cursor() {
       return () => window.removeEventListener("mousemove", mouseMove);
     }, []);
   
-    const cursorVariants = {
-      default:{x:mousePos.x, y:mousePos.y}
+    const dotVariant = {
+      default:{x:mousePos.x, y:mousePos.y},
+      link: {
+        height: 150,
+        width: 150,
+      }
     };
+
+    //const textEnter = () => setCursorVariant("text");
+    //const textLeave = () => setCursorVariant("default");
 
     return (
         <motion.section 
-            className="customCursor"
-            variants={cursorVariants}
+            className="cursor_dot"
+            variants={dotVariant}
             animate="default"
             transition={{
-              bounce: 0,
-              delay:0,
-              bounceDamping:0,
-              bounceStiffness:0,
-              damping:0,
-              restSpeed:0,
-              type:false
-
+              type:'spring'
             }}
           />
     )

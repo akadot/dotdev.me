@@ -6,7 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  cursor: none;
+  // cursor: none;
 }
 
 html,
@@ -37,31 +37,19 @@ span {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
 }
 
-.customCursor{
-  width: 1.5rem;
-  height: 1.5rem;
-  border: 0.15rem dotted colors.$main-fg;
+.cursor_dot{
+  width: 0.5rem;
+  height: 0.5rem;
   border-radius: 100%;
-  background-color:transparent;
+  background-color:colors.$main-fg;
 
   position: fixed;
-  top: -15px;
-  left: -12px;
+  top: -0.2rem;
+  left: -0.1rem;
   pointer-events: none;
-
-  &::after{
-    content: "";
-    width: 0.3rem;
-    height: 0.3rem;
-    background-color: colors.$home;
-    display: block;
-    border-radius: 100%;
-    margin:auto;
-    margin-top: 50%;
-    transform: translateY(-50%);
-  }
 }
 
 .not_found{
