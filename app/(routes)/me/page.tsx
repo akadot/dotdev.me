@@ -16,7 +16,6 @@ export default function Page() {
       <section>
         <section className={styles.photo_container}>
           <section className={styles.photo}>
-            <Image src="/me3.jpeg" alt="me" width={280} height={335} quality={100} objectFit='cover' objectPosition='cover' />
           </section>
         </section>
       </section>
