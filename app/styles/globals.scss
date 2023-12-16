@@ -6,6 +6,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  // cursor: none;
 }
 
 html,
@@ -20,9 +21,10 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 18rem;
+  padding: 4rem 20rem 2rem 20rem;
 
-  background-color: colors.$main-bg;
+  background-image: colors.$bg-gradient;
+  background-blend-mode: multiply;
   color: colors.$main-fg;
 
   font-family: 'Lexend';
@@ -35,4 +37,49 @@ span {
 a {
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+}
+
+.cursor_dot{
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+  background-color:colors.$main-fg;
+
+  position: fixed;
+  top: -0.2rem;
+  left: -0.1rem;
+  pointer-events: none;
+}
+
+.not_found{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 0.8rem;
+
+  & h2{
+    font-size: 2.5rem;
+  }
+
+  & a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.3rem;
+    font-size: 1.1rem;
+    background: colors.$gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  & svg{
+    fill: colors.$about;
+  }
+
+  & a:hover{
+    transform: scale(1.3);
+  }
 }

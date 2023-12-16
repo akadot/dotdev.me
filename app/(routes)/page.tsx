@@ -7,7 +7,7 @@ import styles from '@/app/styles/pages/index.module.scss'
 export default function Home() {
   return (
     <main className={styles.container}>
-      <p>Hi, I&apos;m <strong>Murilo Oliveira</strong>, a.k.a</p>
+      <h1>Hi, I&apos;m <strong>Murilo Oliveira</strong>, a.k.a</h1>
       <section>
         <p>dot</p>
         <Typewriter options={{

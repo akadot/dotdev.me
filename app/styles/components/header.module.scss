@@ -8,16 +8,16 @@
 }
 
 .title {
-    display: flex;
-    align-items: center;
     font-weight: 500;
-    font-size: 1.2rem;
-    transition: all 0.2s ease-in-out;
+    font-size: 1.45rem;
+    transition: transform 0.2s ease-in-out;
+    color: colors.$main-fg;
 
     &:hover {
         transform: scale(1.1);
-        text-shadow: 0 0 1px colors.$home; 
-
+        background: colors.$gradient;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
@@ -30,6 +30,7 @@
     position: relative;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
     width: 100%;
 
     &::before {
@@ -66,7 +67,20 @@
 }
 
 .theme{
+    transition: transform 0.2s ease-in-out;
     cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+
+.theme_moon:hover{
+    stroke: url(#svg_gradient);
+}
+
+.theme_sun:hover{
+    fill: url(#svg_gradient);
 }
 
 @keyframes hover_link {

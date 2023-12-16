@@ -23,13 +23,9 @@ async function getData(): Promise<Repos[]> {
                     url: repo.html_url,
                 })
             }
-
-
-
         }).catch(() => {
             console.warn("Void Repos.")
         })
-
     return allRepos.sort((a,b) => b.stars - a.stars);
 }
 
