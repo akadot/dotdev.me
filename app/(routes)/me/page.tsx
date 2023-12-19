@@ -14,7 +14,7 @@ export default function Page() {
         <Socials />
       </section>
       <section className={styles.side_content}>
-      <Image src='/scene-3d.png' alt='3d Scene' width={450} height={320}/>
+      {/* <Image src='/scene-3d-2.png' alt='3d Scene' width={580} height={320}/> */}
       </section>
     </main>
   )
