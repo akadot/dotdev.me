@@ -13,11 +13,8 @@ export default function Page() {
         <p>Mais vale um bebadis conhecidiss, que um <strong>solis</strong> alcoolatra anonimis. Cevadis im ampola pa arma uma pindureta. Atirei o pau no gatis, per gatis num morreus. Per aumento <strong>derila</strong> de cachacis, eu reclamis.</p>
         <Socials />
       </section>
-      <section>
-        <section className={styles.photo_container}>
-          <section className={styles.photo}>
-          </section>
-        </section>
+      <section className={styles.side_content}>
+      {/* <Image src='/scene-3d-2.png' alt='3d Scene' width={580} height={320}/> */}
       </section>
     </main>
   )

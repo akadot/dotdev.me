@@ -22,35 +22,3 @@
         color: colors.$about;
     }
 }
-
-.photo_container{
-    width: 17rem;
-    height: 25rem;
-    background-color: #fff;
-    transform:
-        perspective(1000px)
-        rotateX(4deg)
-        rotateY(-16deg)
-        rotateZ(4deg);
-    box-shadow: 24px 16px 64px 0 rgba(16, 69, 214, 0.322);
-    border-radius: 0.2rem;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0.8rem 0.8rem 4rem 0.8rem;
-    transition: transform 0.5s ease-in-out;
-}
-
-.photo_container:hover{
-    transform:
-        perspective(1000px)
-        rotateX(4deg)
-        rotateY(-25deg)
-        rotateZ(10deg);
-}
-
-.photo{
-    width: 100%;
-    height: 100%;
-    background-color: colors.$main-bg;
-}
