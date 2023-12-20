@@ -1,45 +1,13 @@
-import Link from 'next/link';
-import { HiOutlineLanguage, HiOutlineClock } from 'react-icons/hi2'
-
-import { DevPosts } from '@/app/types/posts'
-import {formatDate} from '@/app/utils/formatter'
-
-import styles from '@/app/styles/pages/posts.module.scss'
+'use client'
 import { useState } from 'react';
+import Link from 'next/link';
 
-async function getData(): Promise<{posts:DevPosts[], tags:string[]}> {
-    let allPosts: DevPosts[] = [];
-    let allTags: string[] = [];
-
-    await fetch("https://dev.to/api/articles/latest?username=akadot_")
-        .then(async (res) => {
-            let content = await res.json();
-
-            for (let post of content) {
-                allPosts.push({
-                    id: post.id,
-                    title: post.title,
-                    date: formatDate(post.published_timestamp),
-                    tags: post.tag_list,
-                    url: post.url,
-                    lang: post.description.includes("PT-BR") ? 'br' : 'en'
-                })
-
-                for(let tag of post.tag_list){
-                    if(!allTags.includes(tag)) allTags.push(tag)
-                }
-            }
-
-        }).catch(() => {
-            console.warn("Void Posts.")
-        })
-
-    return {posts: allPosts, tags: allTags};
-}
-
+import {getPosts} from '@/app/utils/fetching'
+import { HiOutlineLanguage, HiOutlineClock } from 'react-icons/hi2'
+import styles from '@/app/styles/pages/posts.module.scss'
 
 export default async function Page() {
-    const {posts, tags} = await getData();
+    const {posts, tags} = await getPosts();
 
     const [filtered, setFiltered] = useState(posts);
 
