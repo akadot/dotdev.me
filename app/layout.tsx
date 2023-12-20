@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import '@/app/styles/globals.scss'
 
 import Header from '@/app/components/Header'
-import Cursor from '@/app/components/Cursor'
+// import Cursor from '@/app/components/Cursor'
 
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({
           <Header/>
           {children}
           <span>made with 🌻 ☕ 🎧 💖 by myself ©2023</span>
-          <Cursor/>
+          {/* <Cursor/> */}
         </body>
     </html>
   )

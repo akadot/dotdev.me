@@ -22,3 +22,10 @@
         color: colors.$about;
     }
 }
+
+.side_content{
+    & canvas{
+        width: 25rem;
+        height: 25rem;
+    }
+}
