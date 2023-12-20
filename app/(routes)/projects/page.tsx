@@ -8,15 +8,15 @@ import styles from '@/app/styles/pages/projects.module.scss'
 
 export default async function Page() {
 
-    const {repos, topics} = await getProjects();
+    const {repos, langs} = await getProjects();
 
     const [filtered, setFiltered] = useState(repos);
 
     const FilterRepos = (filter : string) : void => {
         if(filter == "all") setFiltered(repos);
         
-        if(topics.includes(filter)){
-            let reposFound = repos.filter(item => item.topics.includes(filter));
+        if(langs.includes(filter)){
+            let reposFound = repos.filter(item => item.language == filter);
 
             if(reposFound.length > 0) setFiltered(reposFound);
         }
@@ -27,10 +27,10 @@ export default async function Page() {
             <p>💡 Some cool description.</p>
             <section className={styles.filters}>
                 <span onClick={() => FilterRepos("all")}>All</span>
-                {topics.map((topic, idx) => 
+                {langs.map((lang, idx) => 
                     {
                         return (
-                            <span key={`${idx}-${topic}`} onClick={() => FilterRepos(topic)}>{topic}</span>
+                            <span key={`${idx}-${lang}`} onClick={() => FilterRepos(lang)}>{lang}</span>
                         )
                     })}
             </section>

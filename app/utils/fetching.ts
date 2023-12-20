@@ -32,9 +32,9 @@ export async function getPosts(): Promise<{posts:DevPosts[], tags:string[]}>{
     return {posts: allPosts, tags: allTags};
 }
 
-export async function getProjects(): Promise<{repos: Repos[], topics:string[]}> {
+export async function getProjects(): Promise<{repos: Repos[], langs:string[]}> {
     let allRepos: Repos[] = [];
-    let allTopics: string[] = [];
+    let allLangs: string[] = [];
 
     await fetch("https://api.github.com/users/akadot/repos")
         .then(async (res) => {
@@ -51,14 +51,13 @@ export async function getProjects(): Promise<{repos: Repos[], topics:string[]}> 
                     url: repo.html_url,
                 })
 
-                for(let topic of repo.topics){
-                    if(!allTopics.includes(topic)) allTopics.push(topic)
-                }
+                if(!allLangs.includes(repo.language)) allLangs.push(repo.language)
+                
             }
         }).catch(() => {
             console.warn("Void Repos.")
         })
 
     
-    return {repos: allRepos.sort((a,b) => b.stars - a.stars), topics: allTopics};
+    return {repos: allRepos.sort((a,b) => b.stars - a.stars), langs: allLangs};
 }
