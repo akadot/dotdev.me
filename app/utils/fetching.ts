@@ -2,9 +2,8 @@ import { DevPosts } from '@/app/types/posts'
 import { Repos } from '@/app/types/repos'
 import {formatDate} from '@/app/utils/formatter'
 
-export async function getPosts(): Promise<{posts:DevPosts[], tags:string[]}>{
+export async function getPosts(): Promise<DevPosts[]>{
     let allPosts: DevPosts[] = [];
-    let allTags: string[] = [];
 
     await fetch("https://dev.to/api/articles/latest?username=akadot_")
         .then(async (res) => {
@@ -19,17 +18,14 @@ export async function getPosts(): Promise<{posts:DevPosts[], tags:string[]}>{
                     url: post.url,
                     lang: post.description.includes("PT-BR") ? 'br' : 'en'
                 })
-
-                for(let tag of post.tag_list){
-                    if(!allTags.includes(tag)) allTags.push(tag)
-                }
+                
             }
 
         }).catch(() => {
             console.warn("Void Posts.")
         })
 
-    return {posts: allPosts, tags: allTags};
+    return  allPosts;
 }
 
 export async function getProjects(): Promise<{repos: Repos[], langs:string[]}> {
@@ -51,7 +47,7 @@ export async function getProjects(): Promise<{repos: Repos[], langs:string[]}> {
                     url: repo.html_url,
                 })
 
-                if(!allLangs.includes(repo.language)) allLangs.push(repo.language)
+                if(!allLangs.includes(repo.language) && repo.language != '' && repo.language != null) allLangs.push(repo.language)
                 
             }
         }).catch(() => {

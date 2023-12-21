@@ -90,3 +90,28 @@
         0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
         0 3.5px 6px hsla(0, 0%, 0%, 0.09);
 }
+
+.post_search{
+    // border: 0.02rem solid;
+    border-radius: 0.3rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0.8rem;
+    background-color: #ffffff13;
+
+    & input{
+        width: 100%;
+        background-color: transparent;
+        color: colors.$main-fg;
+        border: none;
+        outline: none;
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+
+    & svg {
+        fill:  colors.$gray-fg;
+    }
+}
