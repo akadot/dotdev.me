@@ -43,7 +43,6 @@ export async function getProjects(): Promise<{repos: Repos[], langs:string[]}> {
                     description: repo.description,
                     language: repo.language,
                     stars: Number(repo.stargazers_count),
-                    topics:repo.topics,
                     url: repo.html_url,
                 })
 

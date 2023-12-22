@@ -86,30 +86,6 @@ $colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, col
     }
 }
 
-.topics_list {
-    display: flex;
-    align-items: center;
-    column-gap: 0.2rem;
-    row-gap: 0.2rem;
-    flex-wrap: wrap;
-}
-
-.topic {
-    font-size: 0.8rem;
-    padding: 0.15rem;
-    border-radius: 0.3rem;
-    color: colors.$gray-fg;
-
-
-    box-shadow: inset 0 0 0.5px 1px #ffffff23,
-    /* shadow ring 👇 */
-    0 0 0 1px hsla(0, 0%, 0%, 0.05),
-    /* multiple soft shadows 👇 */
-    0 0.3px 0.4px hsla(0, 0%, 0%, 0.02),
-    0 0.9px 1.5px hsla(0, 0%, 0%, 0.045),
-    0 3.5px 6px hsla(0, 0%, 0%, 0.09);
-}
-
 .lang_filter{
     width: 100%;
     display: flex;

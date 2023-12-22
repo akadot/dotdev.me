@@ -4,6 +4,5 @@ export type Repos = {
     description:string,
     language: string,
     stars:number,
-    topics: string[],
     url:string,
 }
