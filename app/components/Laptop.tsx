@@ -5,6 +5,9 @@ import { Html, useGLTF } from '@react-three/drei'
 import { GLTF } from 'three-stdlib'
 import { useFrame } from '@react-three/fiber'
 
+import Typewriter from 'typewriter-effect';
+import styles from '@/app/styles/components/laptop.module.scss'
+
 
 type GLTFResult = GLTF & {
   nodes: {
@@ -40,7 +43,7 @@ export function Model(props: JSX.IntrinsicElements['group']) {
       group.current.rotation.z = THREE.MathUtils.lerp(group.current.rotation.z, Math.sin(t / 8) / 20, 0.1)
       group.current.position.y = THREE.MathUtils.lerp(group.current.position.y, (-2 + Math.sin(t / 2)) / 2, 0.1)
     }
-   })
+  })
 
   return (
     <group ref={group} {...props} dispose={null}>
@@ -48,14 +51,8 @@ export function Model(props: JSX.IntrinsicElements['group']) {
         <group position={[0, 2.965, -0.13]} rotation={[Math.PI / 2, 0, 0]}>
           <mesh geometry={nodes.Cube008.geometry} material={materials.aluminium} />
           <mesh geometry={nodes.Cube008_1.geometry} material={materials['matte.001']} />
-          <mesh geometry={nodes.Cube008_2.geometry}>
-          <Html className="screen" rotation-x={-Math.PI / 2} position={[0, 0.05, -0.09]} transform occlude>
-              <div className="screen_content" onPointerDown={(e) => e.stopPropagation()}>
-                <section>
-                  <p>Test</p>
-                </section>
-              </div>
-            </Html>
+          <mesh geometry={nodes.Cube008_2.geometry} material={materials["screen.001"]}>
+            {/* I'LL PUT HTML HERE */}
           </mesh>
         </group>
       </group>
