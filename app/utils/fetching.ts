@@ -41,14 +41,14 @@ export async function getProjects(): Promise<{repos: Repos[], langs:string[]}> {
                     id: repo.id,
                     name: repo.name,
                     description: repo.description,
-                    language: repo.language,
+                    language: repo.language != null ? repo.language : 'Unknown',
                     stars: Number(repo.stargazers_count),
                     url: repo.html_url,
                 })
 
                 if(!allLangs.includes(repo.language) && repo.language != '' && repo.language != null) allLangs.push(repo.language)
-                
             }
+            allLangs.push('Unknown');
         }).catch(() => {
             console.warn("Void Repos.")
         })
