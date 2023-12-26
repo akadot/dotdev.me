@@ -1,17 +1,25 @@
+'use client'
 import Board from "@/app/components/Tetris/Board"
-import {EmptyCell} from '@/app/types/tetris'
+import UpcomingBlocks from "@/app/components/Tetris/UpcomingBlocks"
+import { useTetris } from '@/app/hooks/useTetris'
 
 import "@/app/styles/pages/tetris.scss"
 
-const board = Array(20)
-.fill(null)
-.map(() => Array(12).fill(EmptyCell.Empty))
+export default function Page() {
+    const { board, startGame, isPlaying, score, upcomingBlocks } = useTetris();
 
-export default function Page(){
     return (
         <>
             <h1>Tetris</h1>
-            <Board currentBoard={board}/>
+            <Board currentBoard={board} />
+            <div className="controls">
+                <h2>Score: {score}</h2>
+                {isPlaying ? (
+                    <UpcomingBlocks upcomingBlocks={upcomingBlocks} />
+                ) : (
+                    <button onClick={startGame}>New Game</button>
+                )}
+            </div>
         </>
     )
 }
