@@ -18,7 +18,12 @@ export default function Posts(props: PostsProps) {
     const FilterProjects = (filters: React.FormEvent<HTMLInputElement>) => {
         if (!filters.currentTarget || filters.currentTarget.value) setFiltered(props.posts);
 
-        const foundPosts = props.posts.filter(item => item.title.includes(filters.currentTarget.value));
+        const foundPosts = props.posts.filter(item => 
+            item.title.toLowerCase().includes(filters.currentTarget.value.toLowerCase()) ||
+            item.tags.join(" ").includes(filters.currentTarget.value) || 
+            item.tags.includes(filters.currentTarget.value.toLowerCase()) ||
+            item.tags.includes(filters.currentTarget.value) ||
+            item.lang.includes(filters.currentTarget.value.toLowerCase()));
 
         if (foundPosts.length > 0) setFiltered(foundPosts);
     }

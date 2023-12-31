@@ -8,7 +8,7 @@ $colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, col
     align-items: center;
     justify-content: center;
     row-gap: 1.5rem;
-    padding-top: 5rem;
+    padding-top: 3.5rem;
     padding-bottom: 2rem;
 }
 
@@ -92,6 +92,7 @@ $colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, col
     align-items: center;
     justify-content: center;
     column-gap: 0.8rem;
+    row-gap: 0.8rem;
 
     & span{
         border: 1px solid;
@@ -99,6 +100,14 @@ $colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, col
         padding: 0.3rem 0.5rem;
         cursor: pointer;
     }
+}
+
+.featured_projects{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-bottom: 4rem;
+    width: 100%;
 }
 
 @for $i from 1 through length($colors-list) {
