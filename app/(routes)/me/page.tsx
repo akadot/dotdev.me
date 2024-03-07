@@ -1,5 +1,3 @@
-import Image from 'next/image'
-import Scene from '@/app/components/3D'
 import Socials from '@/app/components/Socials'
 
 import styles from '@/app/styles/pages/me.module.scss'
@@ -15,8 +13,6 @@ export default function Page() {
         <Socials />
       </section>
       <section className={styles.side_content}>
-        <Scene/>
-      {/* <Image src='/scene-3d-2.png' alt='3d Scene' width={580} height={320}/> */}
       </section>
     </main>
   )

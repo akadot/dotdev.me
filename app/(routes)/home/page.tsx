@@ -4,7 +4,7 @@ import Socials from '@/app/components/Socials'
 
 import styles from '@/app/styles/pages/home.module.scss'
 
-export default function Home() {
+export default function Page() {
   return (
     <main className={styles.container}>
       <h1>Hi, I&apos;m <strong>Murilo Oliveira</strong>, a.k.a</h1>
