@@ -16,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   
+  const currYear = new Date().getFullYear();
 
   return (
     
@@ -23,7 +24,7 @@ export default function RootLayout({
       <body>
           <Header/>
           {children}
-          <span>made with 🌻 ☕ 🎧 💖 by myself ©2023</span>
+          <span>made with 🌻 ☕ 🎧 💖 by myself ©{currYear}</span>
           {/* <Cursor/> */}
         </body>
     </html>

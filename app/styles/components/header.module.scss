@@ -53,33 +53,48 @@
     }
 }
 
-.pages[href='/me']::before{
+.pages[href='/me']::before {
     background-color: colors.$about;
 }
-.pages[href='/posts']::before{
+
+.pages[href='/posts']::before {
     background-color: colors.$posts;
 }
-.pages[href='/projects']::before{
+
+.pages[href='/projects']::before {
     background-color: colors.$projects;
 }
-.pages[href='/tetris']::before{
+
+.pages[href='/tetris']::before {
     background-color: colors.$tetris;
 }
 
-.theme{
-    transition: transform 0.2s ease-in-out;
-    cursor: pointer;
-
-    &:hover{
-        transform: scale(1.1);
-    }
+.langs {
+    display: flex;
+    column-gap: 0.3rem;
 }
 
-.theme_moon:hover{
+.langs p{
+    cursor: pointer;
+}
+
+.langs span{
+    background: colors.$gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.lang_selected {
+    background: colors.$gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.theme_moon:hover {
     stroke: url(#svg_gradient);
 }
 
-.theme_sun:hover{
+.theme_sun:hover {
     fill: url(#svg_gradient);
 }
 

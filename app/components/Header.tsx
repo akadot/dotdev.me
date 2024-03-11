@@ -18,14 +18,12 @@ export default function Header() {
                 <Link className={styles.pages} href="/me">me</Link>
                 <Link className={styles.pages} href="/posts">posts</Link>
                 <Link className={styles.pages} href="/projects">projects</Link>
-                <Link className={styles.pages} href="/tetris">tetris</Link>
+                <Link className={styles.pages} href="/resume">resume</Link>
             </nav>
-            <section className={styles.theme}>
-                {lang == "ptbr" ?
-                    <p onClick={() => changeLangTo("enus")}>PT</p>
-                    :
-                    <p onClick={() => changeLangTo("ptbr")}>EN</p>
-                }
+            <section className={styles.langs}>
+                <p onClick={() => changeLangTo("ptbr")} className={lang == 'ptbr' ? styles.lang_selected : ''}>pt</p>
+                <span>|</span>
+                <p onClick={() => changeLangTo("enus")} className={lang == 'enus' ? styles.lang_selected : ''}>en</p>
             </section>
         </header>
     )
