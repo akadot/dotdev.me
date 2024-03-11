@@ -1,6 +1,6 @@
 @use '../colors';
 
-$colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, colors.$tetris);
+$colors-list: (colors.$home, colors.$about, colors.$posts, colors.$projects, colors.$resume);
 
 .container{
     display: flex;
